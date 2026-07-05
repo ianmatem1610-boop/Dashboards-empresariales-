@@ -78,3 +78,45 @@ document.getElementById('form-estadistica').addEventListener('submit', function 
         </div>
     `;
 });
+
+// ==========================================
+// CONTROL DEL TEST DE ESTADÍSTICA
+// ==========================================
+document.getElementById('form-test').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Capturar la opción marcada de cada pregunta
+    const r1 = document.querySelector('input[name="p1"]:checked');
+    const r2 = document.querySelector('input[name="p2"]:checked');
+    const r3 = document.querySelector('input[name="p3"]:checked');
+    const r4 = document.querySelector('input[name="p4"]:checked');
+    const r5 = document.querySelector('input[name="p5"]:checked');
+
+    // Validación de seguridad: Validar que todo esté contestado
+    if (!r1 || !r2 || !r3 || !r4 || !r5) {
+        alert("Por favor, responde las 5 preguntas antes de solicitar la calificación.");
+        return;
+    }
+
+    // Contar cuántas respuestas tienen el valor "correcto"
+    let aciertos = 0;
+    const respuestas = [r1, r2, r3, r4, r5];
+
+    respuestas.forEach(res => {
+        if (res.value === "correcto") {
+            aciertos++;
+        }
+    });
+
+    // Renderizar los resultados de la evaluación con estilos integrados
+    const contenedorTest = document.getElementById('resultado-test');
+    const aprobado = aciertos >= 3;
+    
+    contenedorTest.innerHTML = `
+        <div style="background-color: ${aprobado ? '#e8f4f8' : '#f9ebea'}; border-left: 5px solid ${aprobado ? '#2980b9' : '#c0392b'}; padding: 15px; border-radius: 4px;">
+            <p style="color: ${aprobado ? '#2980b9' : '#c0392b'}; margin: 0;">
+                <strong>Resultado:</strong> Evaluado con ${aciertos} de 5 respuestas correctas.
+            </p>
+        </div>
+    `;
+});

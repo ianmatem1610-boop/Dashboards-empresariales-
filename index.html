@@ -41,6 +41,50 @@
 
             <div id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
         </section>
+
+
+        <section id="test-evaluacion">
+            <h2>Test de Autoevaluación: Estadística</h2>
+            <p>Mide tus conocimientos sobre análisis de datos y métricas empresariales.</p>
+            
+            <form id="form-test">
+                <div class="pregunta">
+                    <p><strong>1. ¿Qué medida estadística se obtiene sumando todos los datos y dividiendo el resultado entre la cantidad total de ellos?</strong></p>
+                    <label><input type="radio" name="p1" value="correcto"> La Media (Promedio)</label><br>
+                    <label><input type="radio" name="p1" value="incorrecto"> La Moda</label><br>
+                    <label><input type="radio" name="p1" value="incorrecto"> La Mediana</label>
+                </div>
+
+                <div class="pregunta">
+                    <p><strong>2. ¿Qué requisito es obligatorio cumplir antes de poder calcular la Mediana de un conjunto de datos?</strong></p>
+                    <label><input type="radio" name="p2" value="incorrecto"> Multiplicar todos los valores por cien</label><br>
+                    <label><input type="radio" name="p2" value="correcto"> Ordenar los datos de menor a mayor</label><br>
+                    <label><input type="radio" name="p2" value="incorrecto"> Encontrar el número que más se repite</label>
+                </div>
+
+                <div class="pregunta">
+                    <p><strong>3. Si en las ventas de una semana ningún número se vuelve a repetir, ¿cuál es la Moda?</strong></p>
+                    <label><input type="radio" name="p3" value="incorrecto"> El número cero</label><br>
+                    <label><input type="radio" name="p3" value="correcto"> No existe moda en ese conjunto de datos</label>
+                </div>
+
+                <div class="pregunta">
+                    <p><strong>4. En un conjunto con un número PAR de elementos (ej. 4 datos), ¿cómo se determina la Mediana?</strong></p>
+                    <label><input type="radio" name="p4" value="correcto"> Se promedian los dos valores centrales</label><br>
+                    <label><input type="radio" name="p4" value="incorrecto"> Se toma el número más grande de toda la lista</label>
+                </div>
+
+                <div class="pregunta">
+                    <p><strong>5. ¿Para qué le sirve principalmente a una empresa la "Detección básica de anomalías" en sus ventas?</strong></p>
+                    <label><input type="radio" name="p5" value="incorrecto"> Para cambiar el diseño del logo de la empresa</label><br>
+                    <label><input type="radio" name="p5" value="correcto"> Para identificar caídas extrañas o picos inusuales en los ingresos</label>
+                </div>
+
+                <button type="submit" id="btn-evaluar">Calificar Test</button>
+            </form>
+
+            <div id="resultado-test" style="margin-top: 20px; font-weight: bold;"></div>
+        </section>
     </main>
 
     <script src="script.js"></script>
