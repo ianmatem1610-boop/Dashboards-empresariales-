@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Estadística Aplicada</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Unidad 3: Dashboard de Análisis Estadístico</h1>
+        <p>Analiza tendencias, promedios y métricas de consumo empresarial en tiempo real.</p>
+    </header>
+
+    <main>
+        <section id="teoria">
+            <h2>Conceptos Estadísticos Clave</h2>
+            <p>El análisis de datos permite a las empresas detectar anomalías y entender comportamientos:</p>
+            <ul>
+                <li><strong>Media (Promedio):</strong> Suma de todos los datos dividida entre el número total de datos.</li>
+                <li><strong>Mediana:</strong> El valor central de una lista de datos cuando están ordenados de menor a mayor.</li>
+                <li><strong>Moda:</strong> El dato o valor que se repite con mayor frecuencia en el conjunto.</li>
+            </ul>
+            <blockquote>
+                <strong>Análisis de Tendencias:</strong> <br>
+                Identificar el promedio y la moda ayuda a los negocios a predecir qué días se vende más y qué productos prefiere el consumidor.
+            </blockquote>
+        </section>
+
+        <section id="simulador">
+            <h2>Monitoreo de Ventas Diarias</h2>
+            <form id="form-estadistica">
+                <h3>Ingreso de Datos de Negocio</h3>
+                <label for="datos-ventas">Ingresa las ventas (separadas por comas):</label>
+                <input type="text" id="datos-ventas" placeholder="Ej. 120, 85, 150, 85, 200" required>
+                <small style="color: #7f8c8d; display: block; margin-top: 5px;">*Ingresa números enteros o decimales usando puntos.</small>
+
+                <button type="submit">Generar Reporte Estadístico</button>
+            </form>
+
+            <div id="resultado" style="margin-top: 20px; font-weight: bold;"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
